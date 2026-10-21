@@ -1,0 +1,23 @@
+# Interface
+streamlit>=1.37
+
+# Dados e gráficos
+pandas>=2.2
+numpy>=1.26
+plotly>=5.20
+altair>=5.0
+
+# Leitura de planilhas e PDFs (usadas pelo pandas e pelo app de extratos)
+openpyxl>=3.1
+xlrd>=2.0
+pypdf>=4.0
+
+# Monitoramento de pastas
+watchdog>=4.0
+
+# API Britech
+requests>=2.31
+
+# Automação (somente Windows)
+pywin32>=306; sys_platform == "win32"
+playwright>=1.44

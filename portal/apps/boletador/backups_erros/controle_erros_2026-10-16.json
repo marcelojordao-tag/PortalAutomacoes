@@ -1,0 +1,107 @@
+[
+  {
+    "id": 2,
+    "titulo": "Saldo Vazio BTG",
+    "descricao": "",
+    "coluna": "Problemas / Gargalos",
+    "prioridade": "Crítica",
+    "ocorrencias": 52,
+    "solucao": "",
+    "criado_em": "08/10/2026 17:35",
+    "atualizado_em": "16/10/2026 16:05",
+    "ultima_ocorrencia": "08/10/2026",
+    "categoria": "Valor divergente",
+    "causa_raiz": "",
+    "conexoes": []
+  },
+  {
+    "id": 3,
+    "titulo": "Atraso envio email",
+    "descricao": "",
+    "coluna": "Problemas / Gargalos",
+    "prioridade": "Baixa",
+    "ocorrencias": 56,
+    "solucao": "",
+    "criado_em": "08/10/2026 17:36",
+    "atualizado_em": "09/10/2026 12:16",
+    "ultima_ocorrencia": "09/10/2026"
+  },
+  {
+    "id": 4,
+    "titulo": "Problema Sistema",
+    "descricao": "",
+    "coluna": "Solucionados",
+    "prioridade": "Média",
+    "ocorrencias": 103,
+    "solucao": "",
+    "criado_em": "08/10/2026 17:36",
+    "atualizado_em": "09/10/2026 11:42",
+    "ultima_ocorrencia": "09/10/2026",
+    "resolvido_em": "09/10/2026 11:42"
+  },
+  {
+    "id": 5,
+    "titulo": "Problema Britech",
+    "descricao": "",
+    "coluna": "Em tratamento",
+    "prioridade": "Crítica",
+    "ocorrencias": 78,
+    "solucao": "",
+    "criado_em": "09/10/2026 11:17",
+    "atualizado_em": "16/10/2026 14:37",
+    "ultima_ocorrencia": "09/10/2026",
+    "categoria": "Processo manual",
+    "causa_raiz": "",
+    "conexoes": []
+  },
+  {
+    "id": 6,
+    "titulo": "Comunicação",
+    "descricao": "",
+    "coluna": "Problemas / Gargalos",
+    "prioridade": "Baixa",
+    "ocorrencias": 45,
+    "solucao": "",
+    "criado_em": "09/10/2026 11:22",
+    "atualizado_em": "09/10/2026 11:22",
+    "ultima_ocorrencia": "09/10/2026"
+  },
+  {
+    "id": 7,
+    "titulo": "Atraso Cotas",
+    "descricao": "",
+    "coluna": "Em análise",
+    "prioridade": "Média",
+    "ocorrencias": 4,
+    "solucao": "",
+    "criado_em": "09/10/2026 11:22",
+    "atualizado_em": "16/10/2026 14:37",
+    "ultima_ocorrencia": "16/10/2026",
+    "categoria": "Processo manual",
+    "causa_raiz": "",
+    "conexoes": [
+      2,
+      3,
+      8
+    ]
+  },
+  {
+    "id": 8,
+    "titulo": "Britech explodiu",
+    "descricao": "",
+    "coluna": "Solucionados",
+    "prioridade": "Crítica",
+    "ocorrencias": 2,
+    "solucao": "",
+    "criado_em": "09/10/2026 12:17",
+    "atualizado_em": "16/10/2026 14:37",
+    "ultima_ocorrencia": "13/10/2026",
+    "resolvido_em": "16/10/2026 10:45",
+    "categoria": "Comunicação com a XP",
+    "causa_raiz": "",
+    "conexoes": [
+      5,
+      6
+    ]
+  }
+]

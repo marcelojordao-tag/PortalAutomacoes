@@ -1,0 +1,11 @@
+[theme]
+# Identidade TAG Investimentos (mesma paleta da Mesa de Boletas): vinho + dourado, tema claro
+base = "light"
+primaryColor = "#6A0F2B"
+backgroundColor = "#F7F4F5"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#26151B"
+font = "sans serif"
+
+[browser]
+gatherUsageStats = false
