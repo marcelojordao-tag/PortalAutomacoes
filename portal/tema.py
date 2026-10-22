@@ -11,6 +11,8 @@ from pathlib import Path
 
 import streamlit as st
 
+from versoes import rotulo
+
 LOGO = Path(__file__).resolve().with_name("logo_tag.png")
 
 # Paleta extraída do logo: vinho profundo + branco, com dourado discreto de apoio
@@ -52,6 +54,7 @@ html, body, .stApp, [class*="css"] { font-family: 'Inter', system-ui, sans-serif
 .topo img { height: 52px; width: auto; margin-left: auto; }
 .topo .marca { font-family: 'Inter', system-ui, sans-serif; font-size: 1.8rem; font-weight: 700; letter-spacing: -.01em; margin: 0; color: #fff; line-height: 1.1; }
 .topo .sub { margin: .2rem 0 0 0; font-size: .92rem; color: #E9CFD7; }
+.topo .versao { margin: .35rem 0 0 0; font-size: .72rem; letter-spacing: .04em; color: __DOURADO__; opacity: .95; }
 .topo .selo {
     margin-left: auto; font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
     color: __DOURADO__; border: 1px solid __DOURADO__; border-radius: 999px; padding: .3rem .9rem;
@@ -411,6 +414,7 @@ section[data-testid="stSidebar"] { border-right: 3px solid __DOURADO__; box-shad
     font-size: 1rem; letter-spacing: .04em; border-bottom: 3px solid __DOURADO__; margin-bottom: .8rem;
 }
 [class*="st-key-cartao_"] .cartao-titulo { color: __VINHO__; font-size: 1.15rem; font-weight: 700; margin: 0 0 .3rem; }
+[class*="st-key-cartao_"] .versao-cartao { display: block; margin-top: .35rem; font-size: .72rem; color: __TEXTO_SUAVE__; }
 [class*="st-key-cartao_"] .cartao-desc { color: __TEXTO_SUAVE__; font-size: .92rem; margin: .5rem 0 .3rem !important; }
 [class*="st-key-cartao_"] [data-testid="stPageLink"] { margin-top: .5rem; }
 [class*="st-key-cartao_"] a[data-testid="stPageLink-NavLink"] {
@@ -435,11 +439,15 @@ def _logo_base64() -> str:
         return ""
 
 
-def topo(titulo: str = "Mesa de Boletas", subtitulo: str = "Conferência, liquidação e controle de erros em um só lugar") -> None:
+def topo(titulo: str = "Mesa de Boletas", subtitulo: str = "Conferência, liquidação e controle de erros em um só lugar",
+         app: str = "") -> None:
+    """`app` é a chave em versoes.py; quando informada, mostra a versão do app abaixo do subtítulo."""
     b64 = _logo_base64()
     img = f'<img src="data:image/png;base64,{b64}" alt="TAG Investimentos">' if b64 else ""
+    rot = rotulo(app)
+    versao = f'<p class="versao">{rot}</p>' if rot else ""
     st.markdown(
-        f'<div class="topo"><div><p class="marca">{titulo}</p><p class="sub">{subtitulo}</p></div>'
+        f'<div class="topo"><div><p class="marca">{titulo}</p><p class="sub">{subtitulo}</p>{versao}</div>'
         f'{img or "<span class=selo>TAG Investimentos</span>"}</div>',
         unsafe_allow_html=True,
     )

@@ -964,9 +964,9 @@ if ANALISES:
     primeiro = next(iter(ANALISES.values()))["ativos"]
     topo("Rentabilidade e Cotas",
          f"Conferência do PL com a cota ({primeiro.attrs['inicio']:%d/%m/%Y} a {primeiro.attrs['fim']:%d/%m/%Y}) "
-         "e monitor da rentabilidade diária")
+         "e monitor da rentabilidade diária", app="rentabilidade")
 else:
-    topo("Rentabilidade e Cotas", "Conferência do PL com a cota e monitor da rentabilidade diária")
+    topo("Rentabilidade e Cotas", "Conferência do PL com a cota e monitor da rentabilidade diária", app="rentabilidade")
 
 ultima_busca = st.session_state.pop("resultado_busca", None)
 if ultima_busca:

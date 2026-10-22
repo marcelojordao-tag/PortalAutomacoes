@@ -5,6 +5,7 @@ import pandas as pd
 import streamlit as st
 
 from tema import aplicar_tema, topo
+from versoes import rotulo
 
 RAIZ = Path(__file__).resolve().parent
 LOGO = RAIZ / "logo_tag.png"
@@ -72,7 +73,7 @@ COLUNAS = 3
 
 
 def pagina_home():
-    topo("Portal TAG", "Todas as ferramentas em um só lugar")
+    topo("Portal TAG", "Todas as ferramentas em um só lugar", app="portal")
     st.markdown(
         '<p class="secao">Ferramentas</p><p class="secao-sub">Escolha uma ferramenta para começar</p>',
         unsafe_allow_html=True,
@@ -83,7 +84,7 @@ def pagina_home():
             with col, st.container(key=f"cartao_{f['chave']}"):
                 st.markdown(
                     f'<div class="cartao-sigla">{f["sigla"]}</div>'
-                    f'<p class="cartao-titulo">{f["titulo"]}</p>{f["selo"]()}'
+                    f'<p class="cartao-titulo">{f["titulo"]}</p>{f["selo"]()}<span class="versao-cartao">{rotulo(f["chave"])}</span>'
                     f'<p class="cartao-desc">{f["descricao"]}</p>',
                     unsafe_allow_html=True,
                 )

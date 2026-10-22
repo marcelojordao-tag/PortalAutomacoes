@@ -436,7 +436,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed",
 )
 aplicar_tema()
-topo()
+topo(app="boletas")
 
 
 def estado_vazio(titulo: str, descricao: str) -> None:

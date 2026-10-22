@@ -605,7 +605,7 @@ def carregar_depara_seguro() -> dict[str, dict[str, str]] | None:
         return None
 
 
-topo("Transactions Offshore", "Tratamento dos arquivos de transações por banco")
+topo("Transactions Offshore", "Tratamento dos arquivos de transações por banco", app="bradesco")
 
 data_sel = st.date_input("Data do arquivo", value=date.today(), format="DD/MM/YYYY")
 nomes_abas = ["Todos"] + list(BANCOS)

@@ -1025,7 +1025,7 @@ if _raiz not in sys.path:
 
 from tema import topo  # noqa: E402  (tema compartilhado, na raiz do portal)
 
-topo("Solicitação de extratos", "Gere os e-mails de extratos direto no Outlook e envie")
+topo("Solicitação de extratos", "Gere os e-mails de extratos direto no Outlook e envie", app="extratos")
 
 if not os.path.exists(ARQUIVO):
     st.error(f"Não encontrei '{os.path.basename(ARQUIVO)}'. Coloque a planilha na mesma pasta do app.py e recarregue a página.")
